@@ -7,7 +7,7 @@
 #7. no. of vowels present in the text file
 #8. Count no. of 'do' and 'Do'
 #9. Binary search
-#10. CSV file -pop, read & write
+#10. CSV file - read & write
 #11. Queue operation
 #12. Stack operation.
 
@@ -185,3 +185,56 @@ print("no. of do is {} and no. of Do is {}".format(do,Do))
 
 # OUTPUT:-
 # no. of do is 2 and no. of Do is 2
+
+#10
+'''
+Creat a CSV file and enter few data 
+in my case it was :-
+['Spoorthi', '17', '12-B', 'PCMB']
+['Srinidhi', '17', '12-A', 'PCMC']
+['Kalpana', '17', '12-A', 'PCMC']
+['Ankita', '17', '12-A', 'PCMC']
+'''
+
+import csv
+
+def readingCSV(fileName,mode='a',i=0):
+    data = open(fileName,'r')
+    read = csv.reader(data)
+    if(mode=='a'):
+        for row in read:
+            print(row)
+    elif(mode=='p'):
+        data=list(read)
+        print(data[i])
+
+def writeCSV(fileName,getData):
+    data = open(fileName,'a')
+    write = csv.writer(data)
+    write.writerow(getData)
+    data.close()
+    
+readingCSV("myData.csv")
+# OUTPUT A:-
+'''
+['Spoorthi', '17', '12-B', 'PCMB']
+['Srinidhi', '17', '12-A', 'PCMC']
+['Kalpana', '17', '12-A', 'PCMC']
+['Ankita', '17', '12-A', 'PCMC']
+'''
+
+readingCSV("myData.csv",'p',2)
+# OUTPUT B:-
+# ['Kalpana', '17', '12-A', 'PCMC']
+
+writeCSV("myData.csv",["Sukarna","17","12-A","PCMC"])
+# OUTPUT C:- The changes has been Dond so to see it has done or not so we will use readingCSV() function
+readingCSV("myData.csv")
+'''
+['Spoorthi', '17', '12-B', 'PCMB']
+['Srinidhi', '17', '12-A', 'PCMC']
+['Kalpana', '17', '12-A', 'PCMC']
+['Ankita', '17', '12-A', 'PCMC']
+['Sukarna', '17', '12-A', 'PCMC']
+You can see it has added
+'''
