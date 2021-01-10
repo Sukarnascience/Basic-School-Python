@@ -194,6 +194,7 @@ in my case it was :-
 ['Srinidhi', '17', '12-A', 'PCMC']
 ['Kalpana', '17', '12-A', 'PCMC']
 ['Ankita', '17', '12-A', 'PCMC']
+['Uday', '17', '12-A', 'PCMC']
 '''
 
 import csv
@@ -221,13 +222,14 @@ readingCSV("myData.csv")
 ['Srinidhi', '17', '12-A', 'PCMC']
 ['Kalpana', '17', '12-A', 'PCMC']
 ['Ankita', '17', '12-A', 'PCMC']
+['Uday', '17', '12-A', 'PCMC']
 '''
 
 readingCSV("myData.csv",'p',2)
 # OUTPUT B:-
 # ['Kalpana', '17', '12-A', 'PCMC']
 
-writeCSV("myData.csv",["Sukarna","17","12-A","PCMC"])
+writeCSV("myData.csv",["Bhageashree","17","12-A","PCMC"])
 # OUTPUT C:- The changes has been Dond so to see it has done or not so we will use readingCSV() function
 readingCSV("myData.csv")
 '''
@@ -235,6 +237,7 @@ readingCSV("myData.csv")
 ['Srinidhi', '17', '12-A', 'PCMC']
 ['Kalpana', '17', '12-A', 'PCMC']
 ['Ankita', '17', '12-A', 'PCMC']
-['Sukarna', '17', '12-A', 'PCMC']
+['Uday', '17', '12-A', 'PCMC']
+['Bhageashree', '17', '12-A', 'PCMC']
 You can see it has added
 '''
