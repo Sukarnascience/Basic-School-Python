@@ -116,3 +116,17 @@ while i<=upto:
 # upto where you want [n]:10
 # 0 1 1 2 3 5 8 13 21 34 55 89 
 # 0 1 1 2 3 5 8 13 21 34 55 89 
+
+#6 
+
+randomlist = [15,6,42,5,46,11,1,4,33,52,22,2]
+print("our list of no. are: ",randomlist)
+for i in range(len(randomlist)):
+    for j in range(0,len(randomlist)-i-1):
+        if(randomlist[j]>randomlist[j+1]):
+            randomlist[j],randomlist[j+1]=randomlist[j+1],randomlist[j]
+print("after bubble sorting :",randomlist)
+
+# OUTPUT:-
+# our list of no. are:  [15, 6, 42, 5, 46, 11, 1, 4, 33, 52, 22, 2]
+# after bubble sorting : [1, 2, 4, 5, 6, 11, 15, 22, 33, 42, 46, 52]
