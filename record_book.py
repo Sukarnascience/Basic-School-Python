@@ -6,10 +6,10 @@
 #6. Bubble sort
 #7. no. of vowels present in the text file
 #8. Count no. of 'do' and 'Do'
-#9. Binary search
+#9. Binary search    - still not written
 #10. CSV file - read & write
-#11. Queue operation
-#12. Stack operation.
+#11. Queue operation - still not written
+#12. Stack operation - still not written
 
 #1 ans
 '''
