@@ -159,3 +159,29 @@ ourFile.close()
 
 # OUTPUT:-
 # No. of Vowels present in a text file are : 27
+
+#8
+
+'''
+Create a text file named as 'data.txt' in that write:-
+Do every thing that you want to do
+remeber one thing dont fall in troubble
+Do this do that every thing
+'''
+
+myfile = open("data.txt",'r')
+see = myfile.readlines()
+
+do=Do=0
+
+for i in see:
+    seeMore = i.split()
+    if("do" in seeMore):
+        do += 1
+    if("Do" in seeMore):
+        Do += 1
+
+print("no. of do is {} and no. of Do is {}".format(do,Do))
+
+# OUTPUT:-
+# no. of do is 2 and no. of Do is 2
