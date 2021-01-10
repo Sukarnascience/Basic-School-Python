@@ -9,7 +9,7 @@ HAPPY LEARNING
 
 ## Tips:
 
-1. The file name <b>record_book.py</b> content question like:<i>
+1. The file name <b>[record_book.py](https://github.com/Sukarnascience/Basic-School-Python/blob/main/record_book.py)</b> content question like:<i>
  * No. of lines in a file starting with a or A.
  * simple interest function with default argument.
  * random numbers from 1 to 6
