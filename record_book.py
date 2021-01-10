@@ -130,3 +130,32 @@ print("after bubble sorting :",randomlist)
 # OUTPUT:-
 # our list of no. are:  [15, 6, 42, 5, 46, 11, 1, 4, 33, 52, 22, 2]
 # after bubble sorting : [1, 2, 4, 5, 6, 11, 15, 22, 33, 42, 46, 52]
+
+#7
+
+'''
+Create a text file named as 'data.txt' in that write:-
+A man is a man.
+if you not then you should be.
+a big personality was also a human.
+'''
+
+ourFile = open("data.txt", "r")
+data = ourFile.read()
+count = 0
+for i in data:
+    if( i=='A' or i=='a' or i=='E' or i=='e' or i=='I' or i=='i' or i=='O' or i=='o' or i=='U' or i=='u'):
+        count+=1
+        
+print("No. of Vowels present in a text file are :", count)
+ourFile.close()
+
+# other way to write if condition is:-
+#   if(i in ('aAeEiIoOuU')):
+#             or
+#   if(i in ['a','A','e','E','i','I','o','O','u','U']):
+# ................etc.
+# there are multiple way to represent the same thing
+
+# OUTPUT:-
+# No. of Vowels present in a text file are : 27
