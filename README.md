@@ -22,4 +22,11 @@ HAPPY LEARNING
  * CSV file -pop, read & write
  * queue operation
  * stack operation
+ * Any 5 MySQL Query (it is not a part of a Python its MySQL)
+    * -na-
+    * -na-
+    * -na-
+    * -na-
+    * -na-
+ * 14. Python and MySQL interface 
 </i>
