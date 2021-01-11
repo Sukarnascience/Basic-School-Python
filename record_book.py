@@ -1,3 +1,5 @@
+# Writer :- Sukarna Jana
+
 #1. No. of lines in a file starting with a or A.
 #2. Simple interest function with default argument.
 #3. Random numbers from 1 to 6
@@ -251,6 +253,8 @@ You can see it has added
 '''
 
 #14
+# I have done in my way you can change according to you
+# You can use function or not depends upon you
 
 import mysql.connector as sql
 
