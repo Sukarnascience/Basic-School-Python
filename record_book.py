@@ -12,11 +12,11 @@
 #12. Stack operation - still not written
 #Any 5 MySQL Query (it is not a part of a Python its MySQL)
 #13.
-#    A.
-#    B.
-#    C.
-#    D.
-#    E.
+#    A. -still not written
+#    B. -still not written
+#    C. -still not written
+#    D. -still not written
+#    E. -still not written
 #14. Python and MySQL interface 
 
 #1 ans
@@ -248,4 +248,46 @@ readingCSV("myData.csv")
 ['Uday', '17', '12-A', 'PCMC']
 ['Bhageashree', '17', '12-A', 'PCMC']
 You can see it has added
+'''
+
+#14
+
+import mysql.connector as sql
+
+login = sql.connect(host="localhost",user="root",passwd="janajana",database="school")
+
+def create_table(tableName):
+    typer = login.cursor()
+    typer.execute("create table {} (name varchar(20) NOT NULL,RNo int,stream char(4));".format(tableName))
+    login.commit()
+
+def enter_in_table(tableName,data1,data2,data3):
+    typer = login.cursor()
+    typer.execute("INSERT INTO {} VALUES('{}',{},'{}');".format(tableName,data1,data2,data3))
+    login.commit()
+
+def search_by_name(tableName,name):
+    typer = login.cursor()
+    typer.execute("select * from {} where name = '{}';".format(tableName,name))
+    print(typer.fetchall())
+    
+def see(tableName):
+    typer = login.cursor()
+    typer.execute("select * from {};".format(tableName))
+    print(typer.fetchall())
+
+# See according to your output
+create_table('schoolBook')
+enter_in_table('schoolBook','Sukarna Jana',29,'PCMC')
+enter_in_table('schoolBook','friend',0,'-NA-')
+see('schoolBook')
+search_by_name('schoolBook','Sukarna Jana')
+
+# OUTPUT:-
+'''
+1. Done but we cant see
+2. Done but we cant see
+3. Done but we cant see
+4. [('Sukarna Jana', 29, 'PCMC'), ('friend', 0, '-NA-')]
+5. [('Sukarna Jana', 29, 'PCMC')]
 '''
