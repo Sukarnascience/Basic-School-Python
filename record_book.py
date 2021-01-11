@@ -10,6 +10,14 @@
 #10. CSV file - read & write
 #11. Queue operation - still not written
 #12. Stack operation - still not written
+#Any 5 MySQL Query (it is not a part of a Python its MySQL)
+#13.
+#    A.
+#    B.
+#    C.
+#    D.
+#    E.
+#14. Python and MySQL interface 
 
 #1 ans
 '''
