@@ -19,7 +19,7 @@ HAPPY LEARNING
  * no. of vowels present in the text file
  * count no. of 'do' and 'Do'
  * binary search
- * CSV file -pop, read & write
+ * CSV file - read & write
  * queue operation
  * stack operation
  * Any 5 MySQL Query (it is not a part of a Python its MySQL)
