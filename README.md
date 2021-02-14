@@ -23,10 +23,6 @@ HAPPY LEARNING
  * queue operation
  * stack operation
  * Any 5 MySQL Query (it is not a part of a Python its MySQL)
-    * -na-
-    * -na-
-    * -na-
-    * -na-
-    * -na-
+    * it has given in the [record_book.py](https://github.com/Sukarnascience/Basic-School-Python/blob/main/record_book.py) only.
  * 14. Python and MySQL interface 
 </i>
