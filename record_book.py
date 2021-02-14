@@ -14,11 +14,11 @@
 #12. Stack operation - still not written
 #Any 5 MySQL Query (it is not a part of a Python its MySQL)
 #13.
-#    A. -still not written
-#    B. -still not written
-#    C. -still not written
-#    D. -still not written
-#    E. -still not written
+#    A. -see below 
+#    B. -see below 
+#    C. -see below 
+#    D. -see below 
+#    E. -see below 
 #14. Python and MySQL interface 
 
 #1 ans
@@ -294,4 +294,113 @@ search_by_name('schoolBook','Sukarna Jana')
 3. Done but we cant see
 4. [('Sukarna Jana', 29, 'PCMC'), ('friend', 0, '-NA-')]
 5. [('Sukarna Jana', 29, 'PCMC')]
+'''
+
+# 13 MYSQL Query with output
+'''
+> start your mysql <
+
+mysql> create database schoolwork;
+Query OK, 1 row affected (0.41 sec)
+
+mysql> use schoolwork
+Database changed
+mysql> create table report_book
+    -> (id varchar(4),
+    -> name varchar(20),
+    -> class int NOT NULL,
+    -> section char(1) NOT NULL,
+    -> phoneNo int NULL,
+    -> stream char(4) NOT NULL);
+Query OK, 0 rows affected (4.18 sec)
+
+mysql> desc report_book;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | varchar(4)  | YES |      | NULL    |       |
+| name    | varchar(20) | YES |      | NULL    |       |
+| class   | int         | NO  |      | NULL    |       |
+| section | char(1)     | NO  |      | NULL    |       |
+| phoneNo | int         | YES |      | NULL    |       |
+| stream  | char(4)     | NO  |      | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.29 sec)
+
+mysql> insert into report_book
+    -> values("0AB4","sukarna jana",12,'A',0123456789,"PCMC");
+Query OK, 1 row affected (0.44 sec)
+
+mysql> select * from report_book;
++------+--------------+-------+---------+-----------+--------+
+| id   | name         | class | section | phoneNo   | stream |
++------+--------------+-------+---------+-----------+--------+
+| 0AB4 | sukarna jana |    12 | A       | 123456789 | PCMC   |
++------+--------------+-------+---------+-----------+--------+
+1 row in set (0.00 sec)
+
+mysql> insert into report_book
+    -> values("1R2W","spoorthi s",12,'B',987654321,"PCMB"),
+    -> ("8BA9","srinidhi",12,'A',753869421,"PCMC"),
+    -> ("789A","ravi kumar",12,'C',376824109,"AEIB"),
+    -> ("75BB","radika",12,'A',718293645,"PCMP");
+Query OK, 4 rows affected (0.31 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from report_book;
++------+--------------+-------+---------+-----------+--------+
+| id   | name         | class | section | phoneNo   | stream |
++------+--------------+-------+---------+-----------+--------+
+| 0AB4 | sukarna jana |    12 | A       | 123456789 | PCMC   |
+| 1R2W | spoorthi s   |    12 | B       | 987654321 | PCMB   |
+| 8BA9 | srinidhi     |    12 | A       | 753869421 | PCMC   |
+| 789A | ravi kumar   |    12 | C       | 376824109 | AEIB   |
+| 75BB | radika       |    12 | A       | 718293645 | PCMP   |
++------+--------------+-------+---------+-----------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from report_book where stream="PCMC";
++------+--------------+-------+---------+-----------+--------+
+| id   | name         | class | section | phoneNo   | stream |
++------+--------------+-------+---------+-----------+--------+
+| 0AB4 | sukarna jana |    12 | A       | 123456789 | PCMC   |
+| 8BA9 | srinidhi     |    12 | A       | 753869421 | PCMC   |
++------+--------------+-------+---------+-----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> update report_book set phoneNo=111188889 where name="srinidhi";
+Query OK, 1 row affected (0.17 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from report_book;
++------+--------------+-------+---------+-----------+--------+
+| id   | name         | class | section | phoneNo   | stream |
++------+--------------+-------+---------+-----------+--------+
+| 0AB4 | sukarna jana |    12 | A       | 123456789 | PCMC   |
+| 1R2W | spoorthi s   |    12 | B       | 987654321 | PCMB   |
+| 8BA9 | srinidhi     |    12 | A       | 111188889 | PCMC   |
+| 789A | ravi kumar   |    12 | C       | 376824109 | AEIB   |
+| 75BB | radika       |    12 | A       | 718293645 | PCMP   |
++------+--------------+-------+---------+-----------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from report_book where name like "s%";
++------+--------------+-------+---------+-----------+--------+
+| id   | name         | class | section | phoneNo   | stream |
++------+--------------+-------+---------+-----------+--------+
+| 0AB4 | sukarna jana |    12 | A       | 123456789 | PCMC   |
+| 1R2W | spoorthi s   |    12 | B       | 987654321 | PCMB   |
+| 8BA9 | srinidhi     |    12 | A       | 111188889 | PCMC   |
++------+--------------+-------+---------+-----------+--------+
+3 rows in set (0.01 sec)
+
+mysql> select count(*) from report_book where name like "s%";
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.02 sec)
+
+mysql>
 '''
